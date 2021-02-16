@@ -16,8 +16,8 @@ If NOT found run following: \
 
 From directory with compressed FASTQ files run following script\
 `$ mapFASTQfiles_hg19.sh `\
-Following sentence pops up:\
+-Following sentence pops up:\
 `Give a full name (including pathway) of a file containing hg19 blacklisted sites.`\
-Provide following (these are blacklisted sites defined by ENCODE):\
+-Provide following (these are blacklisted sites defined by ENCODE):\
 `localPathTo_H3K27ac_in_stunting_folder/associated_files/hg19_blacklist.bed`
 
