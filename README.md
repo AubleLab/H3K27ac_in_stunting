@@ -28,7 +28,7 @@ If NOT found run following: \
 `$ refgenie pull dm6/bowtie2_index` 
 
 From directory with compressed FASTQ files run following script\
-`$ mapFASTQfiles_dm6.sh `\
+**`$ mapFASTQfiles_dm6.sh `\**
 -Following sentence pops up:\
 `Give a full name (including pathway) of a file containing dm6 blacklisted sites.`\
 -Provide following (these are blacklisted sites defined by ENCODE):\
