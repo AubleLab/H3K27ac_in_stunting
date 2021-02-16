@@ -29,7 +29,7 @@ do
 	#sort and index the bam file
 	sorted="${fileName}_sorted"
 	sortedBAM="${sorted}.bam"
-	sortedBAI="${fileName}_sorted.bam.bai"
+	sortedBAI="${sortedBAM}.bai"
 	samtools sort $unsortedBAM $sorted
 	samtools index $sortedBAM
 	
@@ -50,7 +50,7 @@ do
 	#sort and index
 	sorted="${fileName}_filtered_sorted"
 	sortedBAM="${sorted}.bam"
-	sortedBAI="${fileName}_filtered_sorted.bam.bai"
+	sortedBAI="${sortedBAM}.bai"
 	samtools sort $filteredBAM $sorted
 	samtools index $sortedBAM
 	
