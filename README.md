@@ -33,7 +33,16 @@ e.g. *`localPathToInoutBAM/input.bam`*\
 \
 Outputs from peak-calling are placed into individual folders named after individual BAM files.
 
-### 3) Map FASTQ files to dm6
+### 3) Use ROSE to identify putative enhancers and superenhancers
+###### Prerequisities:
++ [ROSE](http://younglab.wi.mit.edu/super_enhancer_code.html)
+
+Place all *broadPeak* files called with MACS2 in previous step into one folder. From this folder run:\
+`$ broadPeakToGff.sh`\
+
+
+
+### 4) Map FASTQ files to dm6
 First check if you have bowtie2 index.\
 `$ refgenie seek dm6/bowtie2_index`\
 If NOT found run following: \
