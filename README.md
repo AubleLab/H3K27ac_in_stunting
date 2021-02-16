@@ -29,7 +29,7 @@ From directory with all of the hg19 BAM files run following:\
 `$ callPeaks.sh`\
 In our settings we used input as a control for peak calling, when asked provide name of the input BAM file (including path name). !!! Input BAM file should be placed at different location from the other BAM files, otherewise peak-calling will be done also on this file).\
 *`What is the name of the control dataset (including path)?`*\
-e.g. *`localPathToInoutBAM/input.bam`*\
+e.g. *`localPathToInputBAM/input.bam`*\
 \
 Outputs from peak-calling are placed into individual folders named after individual BAM files.
 
@@ -38,8 +38,27 @@ Outputs from peak-calling are placed into individual folders named after individ
 + [ROSE](http://younglab.wi.mit.edu/super_enhancer_code.html)
 
 Place all *broadPeak* files called with MACS2 in previous step into one folder. From this folder run:\
-`$ broadPeakToGff.sh`\
+`$ broadPeakToGff.sh`
 
+Run following script from a folder, where you have ROSE scripts saved and make sure to set up python 2.7 as default.\
+`$ rose_enahncers.sh`
+
+4 questions will pop up:\
+*`What is the name of the folder with BAM files?`*\
+provide:  *`localPathToBAMfiles/`*\
+
+*`What is the name of the control BAM file?`*\
+e.g. *`localPathToInputBAM/input.bam`*\
+
+
+*`What is the name of the folder with gff files?`*\
+provide:  *`localPathToGFFfiles/`*\
+
+
+*`Where should be the output files be placed?`*\
+provide:  *`localPathToDesiredOutputDir/`*
+
+BAM files and GFF files are matched base on the file names. Outputs from the script are stored into the directory provided in the answer t the last question.
 
 
 ### 4) Map FASTQ files to dm6
