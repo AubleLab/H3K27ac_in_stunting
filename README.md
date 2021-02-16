@@ -58,7 +58,7 @@ provide:  *`localPathToGFFfiles/`*
 *`Where should be the output files be placed?`*\
 provide:  *`localPathToDesiredOutputDir/`*
 
-BAM files and GFF files are matched base on the file names. Outputs from the script are stored into the directory provided in the answer t the last question.
+BAM files and GFF files are matched base on the file names. Outputs from the script are stored into the directory provided in the answer to the last question.
 
 
 ### 4) Map FASTQ files to dm6
