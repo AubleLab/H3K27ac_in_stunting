@@ -15,11 +15,11 @@ First check if you have bowtie2 index and file with chromosome sizes.\
 If an index is not found runn following: \
 `$ refgenie pull hg19/bowtie2_index` \
 \
-Do the same for chromosoem sizes: \
-`refgenie seek hg19/fasta.chrom_sizes`\
+Do the same for chromosome sizes: \
+`$ refgenie seek hg19/fasta.chrom_sizes`\
 \
 If not found:\
-`refgenie pull hg19/fasta.chrom_sizes`
+`$ refgenie pull hg19/fasta.chrom_sizes`
 
 
 `mapFASTQfiles_hg19.sh `
