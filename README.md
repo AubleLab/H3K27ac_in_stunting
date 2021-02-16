@@ -9,15 +9,15 @@ All scripts relevant to the paper describing H3K27ac changes in stunted children
 + [samtools](http://www.htslib.org/)
 + [bedtools](https://bedtools.readthedocs.io/en/latest/index.html)
 
-First check if you have bowtie2 index and file with chromosome sizes.\
+First check if you have bowtie2 index.\
 `$ refgenie seek hg19/bowtie2_index`\
-If an index is not found runn following: \
+If NOT found run following: \
 `$ refgenie pull hg19/bowtie2_index` \
-\
-Do the same for chromosome sizes: \
-`$ refgenie seek hg19/fasta.chrom_sizes`\
-If not found:\
-`$ refgenie pull hg19/fasta.chrom_sizes`
 
+From directory with compressed FASTQ files run following script\
+`$ mapFASTQfiles_hg19.sh `\
+Following sentence pops up:\
+`Give a full name (including pathway) of a file containing hg19 blacklisted sites.`\
+Provide following (these are blacklisted sites defined by ENCODE):\
+`localPathTo_H3K27ac_in_stunting_folder/associated_files/hg19_blacklist.bed`
 
-`mapFASTQfiles_hg19.sh `
