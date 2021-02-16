@@ -29,8 +29,9 @@ From directory with all of the hg19 BAM files run following:\
 `$ callPeaks.sh`\
 In our settings we used input as a control for peak calling, when asked provide name of the input BAM file (including path name). !!! Input BAM file should be placed at different location from the other BAM files, otherewise peak-calling will be done also on this file).\
 *`What is the name of the control dataset (including path)?`*\
-e.g. *`localPathToInoutBAM/input.bam`*
-
+e.g. *`localPathToInoutBAM/input.bam`*\
+\
+Outputs from peak-calling are placed into individual folders named after individual BAM files.
 
 ### 3) Map FASTQ files to dm6
 First check if you have bowtie2 index.\
