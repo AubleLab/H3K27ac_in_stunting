@@ -45,14 +45,14 @@ Run following script from a folder, where you have ROSE scripts saved and make s
 
 4 questions will pop up:\
 *`What is the name of the folder with BAM files?`*\
-provide:  *`localPathToBAMfiles/`*\
+provide:  *`localPathToBAMfiles/`*
 
 *`What is the name of the control BAM file?`*\
-e.g. *`localPathToInputBAM/input.bam`*\
+e.g. *`localPathToInputBAM/input.bam`*
 
 
 *`What is the name of the folder with gff files?`*\
-provide:  *`localPathToGFFfiles/`*\
+provide:  *`localPathToGFFfiles/`*
 
 
 *`Where should be the output files be placed?`*\
