@@ -15,6 +15,6 @@ for BAMfile in *.bam
 	fileName="${BAMfile%%.*}"
 	
 	mkdir $fileName
-	macs2 callpeak -t $BAMfile -c $controlBAM -n $fileName --broad -g hs --broad-cutoff 0.01 --outdir ./$fileName
+	macs2 callpeak -t $BAMfile -c $controlBAM -n $fileName --broad -g hs --broad-cutoff 0.05 --outdir ./$fileName
 done
 
