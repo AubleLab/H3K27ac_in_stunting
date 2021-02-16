@@ -21,9 +21,16 @@ If NOT found run following: \
 -Provide following (these are blacklisted sites defined by ENCODE):\
 *`localPathTo_H3K27ac_in_stunting_folder/associated_files/hg19_blacklist.bed`*
 
-### 4) Call peaks with MACS2
+### 2) Call peaks with MACS2
 ###### Prerequisities:
 + [MACS2](https://anaconda.org/bioconda/macs2)
+
+From directory with all of the hg19 BAM files run following:\
+`$ callPeaks.sh`\
+In our settings we used input as a control for peak calling, when asked provide name of the input BAM file (including path name). !!! Input BAM file should be placed at different location from the other BAM files, otherewise peak-calling will be done also on this file).\
+*`What is the name of the control dataset (including path)?`*\
+e.g. *`localPathToInoutBAM/input.bam`*
+
 
 ### 3) Map FASTQ files to dm6
 First check if you have bowtie2 index.\
