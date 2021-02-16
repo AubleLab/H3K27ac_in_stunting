@@ -17,9 +17,9 @@ If NOT found run following: \
 From directory with compressed FASTQ files run following script\
 `$ mapFASTQfiles_hg19.sh `\
 -Following sentence pops up:\
-`Give a full name (including pathway) of a file containing hg19 blacklisted sites.`\
+*`Give a full name (including pathway) of a file containing hg19 blacklisted sites.`*\
 -Provide following (these are blacklisted sites defined by ENCODE):\
-`localPathTo_H3K27ac_in_stunting_folder/associated_files/hg19_blacklist.bed`
+*`localPathTo_H3K27ac_in_stunting_folder/associated_files/hg19_blacklist.bed`*
 
 ### 2) Map FASTQ files to dm6
 First check if you have bowtie2 index.\
@@ -28,8 +28,8 @@ If NOT found run following: \
 `$ refgenie pull dm6/bowtie2_index` 
 
 From directory with compressed FASTQ files run following script\
-**`$ mapFASTQfiles_dm6.sh `\**
+`$ mapFASTQfiles_dm6.sh `\
 -Following sentence pops up:\
-`Give a full name (including pathway) of a file containing dm6 blacklisted sites.`\
+*`Give a full name (including pathway) of a file containing dm6 blacklisted sites.`*\
 -Provide following (these are blacklisted sites defined by ENCODE):\
-`localPathTo_H3K27ac_in_stunting_folder/associated_files/dm6_blacklist.bed`
+*`localPathTo_H3K27ac_in_stunting_folder/associated_files/dm6_blacklist.bed`*
