@@ -14,7 +14,7 @@ First check if you have bowtie2 index.\
 If NOT found run following: \
 `$ refgenie pull hg19/bowtie2_index` 
 
-From directory with compressed FASTQ files run following script\
+**From directory with compressed FASTQ files run following script**\
 `$ mapFASTQfiles_hg19.sh `\
 -Following sentence pops up:\
 *`Give a full name (including pathway) of a file containing hg19 blacklisted sites.`*\
@@ -27,7 +27,7 @@ First check if you have bowtie2 index.\
 If NOT found run following: \
 `$ refgenie pull dm6/bowtie2_index` 
 
-From directory with compressed FASTQ files run following script\
+**From directory with compressed FASTQ files run following script**\
 `$ mapFASTQfiles_dm6.sh `\
 -Following sentence pops up:\
 *`Give a full name (including pathway) of a file containing dm6 blacklisted sites.`*\
