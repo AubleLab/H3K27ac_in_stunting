@@ -21,7 +21,11 @@ If NOT found run following: \
 -Provide following (these are blacklisted sites defined by ENCODE):\
 *`localPathTo_H3K27ac_in_stunting_folder/associated_files/hg19_blacklist.bed`*
 
-### 2) Map FASTQ files to dm6
+### 4) Call peaks with MACS2
+###### Prerequisities:
++ [MACS2](https://anaconda.org/bioconda/macs2)
+
+### 3) Map FASTQ files to dm6
 First check if you have bowtie2 index.\
 `$ refgenie seek dm6/bowtie2_index`\
 If NOT found run following: \
