@@ -11,9 +11,10 @@ All scripts relevant to the paper describing H3K27ac changes in stunted children
 
 First check if you have bowtie2 index and file with chromosome sizes.\
 <br />
-`refgenie seek hg19/bowtie2_index`\
+`$ refgenie seek hg19/bowtie2_index`\
 \
-If an index is not found runn following: 
-`refgenie pull hg19/bowtie2_index` \
+If an index is not found runn following: /
+`$ refgenie pull hg19/bowtie2_index` 
+\
 
 `mapFASTQfiles_hg19.sh `
