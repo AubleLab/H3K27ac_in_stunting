@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# the script maps all fastq files within a folder to hg19 and removes blacklisted sites
+# the script maps all fastq files within a folder to hg19, removes unmapped reads, and removes blacklisted sites
+# outputs are sorted and indexed indexed BAM files
 
 
 # get bowtie2 index
