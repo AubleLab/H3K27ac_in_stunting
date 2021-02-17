@@ -88,5 +88,17 @@ New corrected normalization factors are calculated with following R script using
 
 `new_norm_factors_linModel.R`
 
+### 7) Connect genomic regions to genes with EnhancerAtlas 2
+
+Go o [EnhancerAtlas](http://www.enhanceratlas.org/download.php) -> download gene-enhancer interactions (v2.0). here select cell types of interest. (Cell types selected in this manuscript: CD4+, CD8+, CD14+, CD19+, CD20+, GM10847, GM12878, GM12891, GM12892, GM18505, GM18526, GM18951, GM19099, GM19193, GM19238, GM19239, GM19240, PBMC). 
+
+Curate the downloaded files, so they are in a tab delimited format woth columns: chr, start, end, Ensemble ID, gene ID, cell type) - for this use make dircetory **/editedFiles** and run following R script:
+
+`editEnahncerAtlasFiles.R`
+
+Then merge all parts into a final database. From terminal:
+
+`$ cd pathToEditedFiles/ditedFiles/`\
+`$ $ cat *.bed | sort -k1,1 -k2,2n > sortedDatabaseEnhancerAtlas.bed`
 
 
