@@ -61,7 +61,13 @@ provide:  *`localPathToDesiredOutputDir/`*
 BAM files and GFF files are matched base on the file names. Outputs from the script are stored into the directory provided in the answer to the last question.
 
 ### 4) Create count tables
+Move the output files from previous step ending with "_Enhancer.bed" into a separate folder and from here run following  (separte for each age group): 
+`cat *.bed | sort -k1,1 -k2,2n | bedtools merge -i stdin > masterEnhancers.bed`
 
+Place the masterEnhancer.bed file into a folder containing all BAM files for a given age group and from this foloder run: 
+`bedtools multicov -bams *.bam -bed masterEnhancers.bed > countTable.txt`
+
+First three columns in the table are genomic coordinates of regions of interest followed by counts for individual samples. Make sure to add sample names to the sample columns based on their order within the folder.
 
 ### 5) Map FASTQ files to dm6
 First check if you have bowtie2 index.\
@@ -75,3 +81,12 @@ If NOT found run following: \
 *`Give a full name (including pathway) of a file containing dm6 blacklisted sites.`*\
 -Provide following (these are blacklisted sites defined by ENCODE):\
 *`localPathTo_H3K27ac_in_stunting_folder/associated_files/dm6_blacklist.bed`*
+
+### 6) Correct normalization factors
+
+New corrected normalization factors are calculated with following R script using *Drosophila* mapping statistics from  */dm_factor_data/normalize_dm_counts_linModel.csv*
+
+`new_norm_factors_linModel.R`
+
+
+
