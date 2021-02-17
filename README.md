@@ -99,6 +99,9 @@ Curate the downloaded files, so they are in a tab delimited format woth columns:
 Then merge all parts into a final database. From terminal:
 
 `$ cd pathToEditedFiles/ditedFiles/`\
-`$ $ cat *.bed | sort -k1,1 -k2,2n > sortedDatabaseEnhancerAtlas.bed`
+`$ cat *.bed | sort -k1,1 -k2,2n > sortedDatabaseEnhancerAtlas.bed`
 
+Once the database is created use following R script to annotated BED files. (Need to provide path to the folder with BED files, that should be annotated - line 11, and change path to the *sortedDatabaseEnhancerAtlas.bed`* file on line 16)
+
+`annotate_with_EnhancerAtlas2_downloadedDatablase.R`
 
