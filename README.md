@@ -1,4 +1,4 @@
-# H3K27ac_in_stunting
+# H3K27ac in stunting
 All scripts relevant to the paper describing H3K27ac changes in stunted children.
 
 ## Data preprocessing
