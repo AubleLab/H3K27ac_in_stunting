@@ -60,8 +60,10 @@ provide:  *`localPathToDesiredOutputDir/`*
 
 BAM files and GFF files are matched base on the file names. Outputs from the script are stored into the directory provided in the answer to the last question.
 
+### 4) Create count tables
 
-### 4) Map FASTQ files to dm6
+
+### 5) Map FASTQ files to dm6
 First check if you have bowtie2 index.\
 `$ refgenie seek dm6/bowtie2_index`\
 If NOT found run following: \
