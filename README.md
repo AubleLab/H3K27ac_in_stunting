@@ -105,3 +105,7 @@ Once the database is created use following R script to annotated BED files. (Nee
 
 `annotate_with_EnhancerAtlas2_downloadedDatablase.R`
 
+### 8) Alluvial plot to assess changes between ages
+This analysis can be performed using R script:\
+`alluvialPlot.R`\
+with inputs in form of DESeq2 result tables for 18-week-old children and 1-year-old children. Follow instructions in the R script to generate the plots.
