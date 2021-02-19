@@ -114,9 +114,30 @@ with inputs in form of DESeq2 result tables for 18-week-old children and 1-year-
 The CISTROME database for human transcription factors and histone marks can be downloaded from [CISTROME website](http://cistrome.org/db/#/bdown).\
 From within a folder containing info about downloaded files: *human_factor_full_QC.txt*, *human_hm_full_QC.txt*; and actual folders with downloaded BED files: *human_factor/*, *human_hm/* run following R script:\
 `filterBloodSpecificFiles.R`\
-which creates new directories, where only BED files coming from blood cells are placed (*human_factor_blood/*, *human_hm_blood/*) and new info sheets are created (*human_factor_blood_QC.txt*, *human_hm_blood_QC.txt*).\
+The script creates new directories, where only BED files coming from blood cells are placed (*human_factor_blood/*, *human_hm_blood/*) and new info sheets are created (*human_factor_blood_QC.txt*, *human_hm_blood_QC.txt*).\
 
+LOLA takes database input in form of GRangesList object. To convert BED files into GRangesList objects, run following script from within directory containing the *human_factor_blood/*, and *human_hm_blood/* directories.
+`makeGRangesList_forLOLA.R`\
+The script creates 2 GRangesList objects from the BED files: *human_factor_blood.Rdata*, and *human_hm_blood.Rdata*. It also produces a list of empty BED files (*human_factor_blood_unloaded.txt*, *human_hm_blood_unloaded.txt*), that were not added to the GRangesList objects, and will be therefore excluded from an annotation table created in the following step. 
 
+LOLA annotation file requires number of lines within each bed file. From terminal run following: \
+`$ cd localPathTo/human_factor_blood`
+`$ num_of_lines_in_bed_files.sh > human_factor_blood_bedSize.txt`
+`$ mv human_factor_blood_bedSize.txt ..`
 
-F
+`$ cd localPathTo/human_hm_blood`
+`$ num_of_lines_in_bed_files.sh > human_hm_blood_bedSize.txt`
+`$ mv human_hm_blood_bedSize.txt ..`
 
+The region and collection annotaions for LOLA can are then created by running following R script from within directory containing the *human_factor_blood/*, and *human_hm_blood/* directories.
+`makeAnnotFiles_LOLA.R` \
+The resulting files are then *human_factor_blood_regionAnno.csv*, *human_factor_blood_collectionAnno.csv*, *human_hm_blood_regionAnno.csv*, and *human_hm_blood_collectionAnno.csv*. 
+
+You can now move the following list of files to a separate directory, where you want to have LOLA database stored, and you can remove the rest of the files.
+Files for LOLA database: 
+*human_factor_blood_collectionAnno.csv,
+human_factor_blood_regionAnno.csv,
+human_factor_blood.Rdata,
+human_hm_blood_collectionAnno.csv,
+human_hm_blood_regionAnno.csv,
+human_hm_blood.Rdata*
