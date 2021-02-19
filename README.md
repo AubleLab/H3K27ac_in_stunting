@@ -134,10 +134,10 @@ The region and collection annotaions for LOLA can are then created by running fo
 The resulting files are then *human_factor_blood_regionAnno.csv*, *human_factor_blood_collectionAnno.csv*, *human_hm_blood_regionAnno.csv*, and *human_hm_blood_collectionAnno.csv*. 
 
 You can now move the following list of files to a separate directory, where you want to have LOLA database stored, and you can remove the rest of the files.
-Files for LOLA database: 
-*human_factor_blood_collectionAnno.csv,
-human_factor_blood_regionAnno.csv,
-human_factor_blood.Rdata,
-human_hm_blood_collectionAnno.csv,
-human_hm_blood_regionAnno.csv,
+Files for LOLA database: \
+*human_factor_blood_collectionAnno.csv,\
+human_factor_blood_regionAnno.csv,\
+human_factor_blood.Rdata,\
+human_hm_blood_collectionAnno.csv,\
+human_hm_blood_regionAnno.csv,\
 human_hm_blood.Rdata*
