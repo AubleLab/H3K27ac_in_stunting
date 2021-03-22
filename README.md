@@ -3,7 +3,7 @@ All scripts relevant to the paper describing H3K27ac changes in stunted children
 
 ## Data preprocessing
 ### 1) Map FASTQ files to hg19
-###### Prerequisities:
+###### Prerequisites:
 + [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
 + [refgenie](http://refgenie.databio.org/en/latest/)
 + [samtools](http://www.htslib.org/)
@@ -22,19 +22,19 @@ If NOT found run following: \
 *`localPathTo_H3K27ac_in_stunting_folder/associated_files/hg19_blacklist.bed`*
 
 ### 2) Call peaks with MACS2
-###### Prerequisities:
+###### Prerequisites:
 + [MACS2](https://anaconda.org/bioconda/macs2)
 
 From directory with all of the hg19 BAM files run following:\
 `$ callPeaks.sh`\
-In our settings we used input as a control for peak calling, when asked provide name of the input BAM file (including path name). !!! Input BAM file should be placed at different location from the other BAM files, otherewise peak-calling will be done also on this file).\
+In our settings we used input as a control for peak calling, when asked provide name of the input BAM file (including path name). !!! Input BAM file should be placed at different location from the other BAM files, otherwise peak-calling will be done also on this file).\
 *`What is the name of the control dataset (including path)?`*\
 e.g. *`localPathToInputBAM/input.bam`*\
 \
 Outputs from peak-calling are placed into individual folders named after individual BAM files.
 
 ### 3) Use ROSE to identify putative enhancers and superenhancers
-###### Prerequisities:
+###### Prerequisites:
 + [ROSE](http://younglab.wi.mit.edu/super_enhancer_code.html)
 
 Place all *broadPeak* files called with MACS2 in previous step into one folder. From this folder run:\
@@ -61,10 +61,10 @@ provide:  *`localPathToDesiredOutputDir/`*
 BAM files and GFF files are matched base on the file names. Outputs from the script are stored into the directory provided in the answer to the last question.
 
 ### 4) Create count tables
-Move the output files from previous step ending with "_Enhancer.bed" into a separate folder and from here run following  (separte for each age group): 
+Move the output files from previous step ending with "_Enhancer.bed" into a separate folder and from here run following (separate for each age group): 
 `cat *.bed | sort -k1,1 -k2,2n | bedtools merge -i stdin > masterEnhancers.bed`
 
-Place the masterEnhancer.bed file into a folder containing all BAM files for a given age group and from this foloder run: 
+Place the masterEnhancer.bed file into a folder containing all BAM files for a given age group and from this folder run: 
 `bedtools multicov -bams *.bam -bed masterEnhancers.bed > countTable.txt`
 
 First three columns in the table are genomic coordinates of regions of interest followed by counts for individual samples. Make sure to add sample names to the sample columns based on their order within the folder.
@@ -92,7 +92,7 @@ New corrected normalization factors are calculated with following R script using
 
 Go o [EnhancerAtlas](http://www.enhanceratlas.org/download.php) -> download gene-enhancer interactions (v2.0). here select cell types of interest. (Cell types selected in this manuscript: CD4+, CD8+, CD14+, CD19+, CD20+, GM10847, GM12878, GM12891, GM12892, GM18505, GM18526, GM18951, GM19099, GM19193, GM19238, GM19239, GM19240, PBMC). 
 
-Curate the downloaded files, so they are in a tab delimited format woth columns: chr, start, end, Ensemble ID, gene ID, cell type) - for this use make dircetory **/editedFiles** and run following R script:
+Curate the downloaded files, so they are in a tab delimited format woth columns: chr, start, end, Ensemble ID, gene ID, cell type) - for this use make directory **/editedFiles** and run following R script:
 
 `editEnahncerAtlasFiles.R`
 
@@ -129,7 +129,7 @@ LOLA annotation file requires number of lines within each bed file. From termina
 `$ num_of_lines_in_bed_files.sh > human_hm_blood_bedSize.txt`
 `$ mv human_hm_blood_bedSize.txt ..`
 
-The region and collection annotaions for LOLA can are then created by running following R script from within directory containing the *human_factor_blood/*, and *human_hm_blood/* directories.
+The region and collection annotations for LOLA can are then created by running following R script from within directory containing the *human_factor_blood/*, and *human_hm_blood/* directories.
 `makeAnnotFiles_LOLA.R` \
 The resulting files are then *human_factor_blood_regionAnno.csv*, *human_factor_blood_collectionAnno.csv*, *human_hm_blood_regionAnno.csv*, and *human_hm_blood_collectionAnno.csv*. 
 
@@ -142,7 +142,7 @@ human_hm_blood_collectionAnno.csv,\
 human_hm_blood_regionAnno.csv,\
 human_hm_blood.Rdata*
 
-You can then run LOLA with help of following R script, where information about location of created database, location of BED file of interest and location of universe BED file must be provided between lnes 9-25. For more inofrmation on use od LOLA, you can click on the next [link](http://databio.org/lola/).
+You can then run LOLA with help of following R script, where information about location of created database, location of BED file of interest and location of universe BED file must be provided between lnes 9-25. For more information on use od LOLA, you can click on the next [link](http://databio.org/lola/).
 
 `LOLA_cistrome.R`
 
