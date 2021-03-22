@@ -48,18 +48,18 @@ Run following script from a folder, where you have ROSE scripts saved and make s
 
 4 questions will pop up:\
 *`What is the name of the folder with BAM files?`*\
-provide:  *`localPathToBAMfiles/`*
+provide:  *`local/path/to/BAM/files`*
 
 *`What is the name of the control BAM file?`*\
 e.g. *`localPathToInputBAM/input.bam`*
 
 
 *`What is the name of the folder with gff files?`*\
-provide:  *`localPathToGFFfiles/`*
+provide:  *`local/path/to/GFF/files`*
 
 
 *`Where should be the output files be placed?`*\
-provide:  *`localPathToDesiredOutputDir/`*
+provide:  *`local/path/to/desired/output/dir`*
 
 BAM files and GFF files are matched base on the file names. Outputs from the script are stored into the directory provided in the answer to the last question.
 
