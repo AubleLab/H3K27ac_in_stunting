@@ -67,7 +67,7 @@ BAM files and GFF files are matched base on the file names. Outputs from the scr
 Move the output files from previous step ending with "_Enhancer.bed" into a separate folder and from here run following (separate for each age group): \
 `cat *.bed | sort -k1,1 -k2,2n | bedtools merge -i stdin > masterEnhancers.bed`
 
-Place the masterEnhancer.bed file into a folder containing all BAM files for a given age group and from this folder run: 
+Place the masterEnhancer.bed file into a folder containing all BAM files for a given age group and from this folder run: \
 `bedtools multicov -bams *.bam -bed masterEnhancers.bed > countTable.txt`
 
 First three columns in the table are genomic coordinates of regions of interest followed by counts for individual samples. Make sure to add sample names to the sample columns based on their order within the folder.
