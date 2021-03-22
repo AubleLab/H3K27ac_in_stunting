@@ -64,7 +64,7 @@ provide:  *`local/path/to/desired/output/dir`*
 BAM files and GFF files are matched base on the file names. Outputs from the script are stored into the directory provided in the answer to the last question.
 
 ### 4) Create count tables
-Move the output files from previous step ending with "_Enhancer.bed" into a separate folder and from here run following (separate for each age group): 
+Move the output files from previous step ending with "_Enhancer.bed" into a separate folder and from here run following (separate for each age group): \
 `cat *.bed | sort -k1,1 -k2,2n | bedtools merge -i stdin > masterEnhancers.bed`
 
 Place the masterEnhancer.bed file into a folder containing all BAM files for a given age group and from this folder run: 
