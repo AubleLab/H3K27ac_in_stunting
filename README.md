@@ -115,7 +115,14 @@ This analysis can be performed using R script: `alluvialPlot.R` with inputs in f
 
 ### 9) Create database for LOLA from CISTROME database
 The CISTROME database for human transcription factors and histone marks can be downloaded from [CISTROME website](http://cistrome.org/db/#/bdown).\
-From within a folder containing info about downloaded files: *human_factor_full_QC.txt*, *human_hm_full_QC.txt*; and actual folders with downloaded BED files: *human_factor/*, *human_hm/* run following R script:\
+From within a folder containing info about downloaded files: \
+*human_factor_full_QC.txt*, \
+*human_hm_full_QC.txt*,\
+and actual folders with downloaded BED files: \
+*human_factor/*, \
+*human_hm/* 
+
+Run following R script:\
 `filterBloodSpecificFiles.R`\
 The script creates new directories, where only BED files coming from blood cells are placed (*human_factor_blood/*, *human_hm_blood/*) and new info sheets are created (*human_factor_blood_QC.txt*, *human_hm_blood_QC.txt*).\
 
