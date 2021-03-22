@@ -133,8 +133,8 @@ LOLA takes database input in form of GRangesList object. To convert BED files in
 The script creates 2 GRangesList objects from the BED files: *human_factor_blood.Rdata*, and *human_hm_blood.Rdata*. It also produces a list of empty BED files (*human_factor_blood_unloaded.txt*, *human_hm_blood_unloaded.txt*) that were not added to the GRangesList objects, and will be therefore excluded from an annotation table created in the following step. 
 
 LOLA annotation file requires number of lines within each bed file. From terminal run following: \
-`$ cd localPathTo/human_factor_blood`
-`$ num_of_lines_in_bed_files.sh > human_factor_blood_bedSize.txt`
+`$ cd localPathTo/human_factor_blood` \
+`$ num_of_lines_in_bed_files.sh > human_factor_blood_bedSize.txt` \
 `$ mv human_factor_blood_bedSize.txt ..`
 
 `$ cd localPathTo/human_hm_blood`
