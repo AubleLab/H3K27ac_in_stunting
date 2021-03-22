@@ -124,10 +124,12 @@ and actual folders with downloaded BED files: \
 
 Run following R script:\
 `filterBloodSpecificFiles.R`\
+\
 The script creates new directories, where only BED files coming from blood cells are placed (*human_factor_blood/*, *human_hm_blood/*) and new info sheets are created (*human_factor_blood_QC.txt*, *human_hm_blood_QC.txt*).\
 
-LOLA takes database input in form of GRangesList object. To convert BED files into GRangesList objects, run following script from within directory containing the *human_factor_blood/*, and *human_hm_blood/* directories.
+LOLA takes database input in form of GRangesList object. To convert BED files into GRangesList objects, run following script from within directory containing the *human_factor_blood/*, and *human_hm_blood/* directories.\
 `makeGRangesList_forLOLA.R`\
+\
 The script creates 2 GRangesList objects from the BED files: *human_factor_blood.Rdata*, and *human_hm_blood.Rdata*. It also produces a list of empty BED files (*human_factor_blood_unloaded.txt*, *human_hm_blood_unloaded.txt*), that were not added to the GRangesList objects, and will be therefore excluded from an annotation table created in the following step. 
 
 LOLA annotation file requires number of lines within each bed file. From terminal run following: \
