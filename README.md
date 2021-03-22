@@ -70,7 +70,7 @@ Move the output files from previous step ending with "_Enhancer.bed" into a sepa
 Place the masterEnhancer.bed file into a folder containing all BAM files for a given age group and from this folder run: \
 `bedtools multicov -bams *.bam -bed masterEnhancers.bed > countTable.txt`
 
-First three columns in the table are genomic coordinates of regions of interest followed by counts for individual samples. Make sure to add sample names to the sample columns based on their order within the folder.
+First three columns in the table are genomic coordinates of regions of interest followed by counts for individual samples. Make sure to add sample names to the sample columns based on their order within the folder (`ls *.bam`).
 
 ### 5) Map FASTQ files to dm6
 First check if you have bowtie2 index.\
