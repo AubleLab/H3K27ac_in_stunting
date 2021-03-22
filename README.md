@@ -29,6 +29,7 @@ If NOT found run following: \
 
 From directory with all of the hg19 BAM files run following:\
 `$ callPeaks.sh`\
+
 In our settings we used input as a control for peak calling, when asked provide name of the input BAM file (including path name). !!! Input BAM file should be placed at different location from the other BAM files, otherwise peak-calling will be done also on this file).\
 *`What is the name of the control dataset (including path)?`*\
 e.g. *`localPathToInputBAM/input.bam`*\
