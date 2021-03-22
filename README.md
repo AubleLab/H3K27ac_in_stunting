@@ -137,8 +137,8 @@ LOLA annotation file requires number of lines within each bed file. From termina
 `$ num_of_lines_in_bed_files.sh > human_factor_blood_bedSize.txt` \
 `$ mv human_factor_blood_bedSize.txt ..`
 
-`$ cd localPathTo/human_hm_blood`
-`$ num_of_lines_in_bed_files.sh > human_hm_blood_bedSize.txt`
+`$ cd localPathTo/human_hm_blood` \
+`$ num_of_lines_in_bed_files.sh > human_hm_blood_bedSize.txt` \
 `$ mv human_hm_blood_bedSize.txt ..`
 
 The region and collection annotations for LOLA can are then created by running following R script from within directory containing the *human_factor_blood/*, and *human_hm_blood/* directories.
