@@ -155,7 +155,7 @@ human_hm_blood_collectionAnno.csv,\
 human_hm_blood_regionAnno.csv,\
 human_hm_blood.Rdata*
 
-You can then run LOLA with help of following R script, where information about location of created database, location of BED file of interest and location of universe BED file must be provided between lnes 9-25. For more information on use od LOLA, you can click on the next [link](http://databio.org/lola/).
+You can then run LOLA with help of following R script, where information about location of created database, location of BED file of interest and location of universe BED file must be provided between lines 9-25. For more information on use od LOLA, you can click on the next [link](http://databio.org/lola/).
 
 `LOLA_cistrome.R`
 
