@@ -20,7 +20,7 @@ If NOT found run following: \
 
 -Following sentence pops up:\
 *`Give a full name (including pathway) of a file containing hg19 blacklisted sites.`*\
--Provide following (these are blacklisted sites defined by ENCODE):\
+-Provide following (these are blacklisted sites defined by ENCODE - included here in */associated_files* folder):\
 *`localPathTo_H3K27ac_in_stunting_folder/associated_files/hg19_blacklist.bed`*
 
 ### 2) Call peaks with MACS2
@@ -84,7 +84,7 @@ If NOT found run following: \
 
 -Following sentence pops up:\
 *`Give a full name (including pathway) of a file containing dm6 blacklisted sites.`*\
--Provide following (these are blacklisted sites defined by ENCODE):\
+-Provide following (these are blacklisted sites defined by ENCODE - included here in */associated_files* folder):\
 *`localPathTo_H3K27ac_in_stunting_folder/associated_files/dm6_blacklist.bed`*
 
 ### 6) Correct normalization factors
