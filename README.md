@@ -141,8 +141,9 @@ LOLA annotation file requires number of lines within each bed file. From termina
 `$ num_of_lines_in_bed_files.sh > human_hm_blood_bedSize.txt` \
 `$ mv human_hm_blood_bedSize.txt ..`
 
-The region and collection annotations for LOLA can are then created by running following R script from within directory containing the *human_factor_blood/*, and *human_hm_blood/* directories.
-`makeAnnotFiles_LOLA.R` \
+The region and collection annotations for LOLA can then be created by running following R script from within directory containing the *human_factor_blood/*, and *human_hm_blood/* directories.
+`makeAnnotFiles_LOLA.R` 
+
 The resulting files are then *human_factor_blood_regionAnno.csv*, *human_factor_blood_collectionAnno.csv*, *human_hm_blood_regionAnno.csv*, and *human_hm_blood_collectionAnno.csv*. 
 
 You can now move the following list of files to a separate directory, where you want to have LOLA database stored, and you can remove the rest of the files.
