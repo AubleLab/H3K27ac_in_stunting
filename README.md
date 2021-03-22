@@ -74,7 +74,8 @@ First three columns in the table are genomic coordinates of regions of interest 
 
 ### 5) Map FASTQ files to dm6
 First check if you have bowtie2 index.\
-`$ refgenie seek dm6/bowtie2_index`\
+`$ refgenie seek dm6/bowtie2_index`
+
 If NOT found run following: \
 `$ refgenie pull dm6/bowtie2_index` 
 
