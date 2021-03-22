@@ -51,7 +51,7 @@ Run following script from a folder, where you have ROSE scripts saved and make s
 provide:  *`local/path/to/BAM/files`*
 
 *`What is the name of the control BAM file?`*\
-e.g. *`localPathToInputBAM/input.bam`*
+e.g. *`local/path/to/input/BAM/input.bam`*
 
 
 *`What is the name of the folder with gff files?`*\
