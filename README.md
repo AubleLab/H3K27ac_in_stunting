@@ -11,11 +11,13 @@ All scripts relevant to the paper describing H3K27ac changes in stunted children
 
 First check if you have bowtie2 index.\
 `$ refgenie seek hg19/bowtie2_index`\
+
 If NOT found run following: \
 `$ refgenie pull hg19/bowtie2_index` 
 
 **From directory with compressed FASTQ files run following script**\
 `$ mapFASTQfiles_hg19.sh `\
+
 -Following sentence pops up:\
 *`Give a full name (including pathway) of a file containing hg19 blacklisted sites.`*\
 -Provide following (these are blacklisted sites defined by ENCODE):\
